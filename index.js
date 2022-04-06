@@ -4,6 +4,7 @@ const exphbs = require('express-handlebars')
 const res = require('express/lib/response')
 const pool = require('./db/conn')
 const { isRequired } = require('nodemon/lib/utils')
+const port = process.env.PORT || 3000
 
 const app = express()
 
@@ -123,4 +124,4 @@ app.post('/books/remove/:id', (req, res) => {
     })
 })
 
-app.listen(3000)
+app.listen(port)
